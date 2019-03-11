@@ -8,12 +8,16 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Black Ops One">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee Inline">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee Shade">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Black Ops One">
 
         <!-- Styles -->
         <style>
             html, body {
                 background-color: #fff;
-                background-image: url("/images/land-page.jpg");
+                background-image: url("/images/Landing-Page.jpg");
                 background-size: cover;
                 -ms-background-size: cover;
                 -o-background-size: cover;
@@ -52,12 +56,15 @@
 
             .title {
                 font-size: 100px;
-                color: whitesmoke;
+                color:White;
+                font-family: 'Bungee Shade';
+
             }
 
             .links > a {
                 /*color: #636b6f;*/
-                color: white;
+                color:White;
+                font-family: 'Bungee Shade';
                 padding: 0 25px;
                 font-size: 20px;
                 font-weight: 600;

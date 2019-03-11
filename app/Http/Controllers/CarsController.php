@@ -17,8 +17,8 @@ class CarsController extends Controller
 
     public function index()
     {
-        $cars = Car::Where('availability','1')
-            ->with('locations','property','wishlists')
+        $cars = Car::where('availability','1')
+            ->with('locations','property','wishlists','user')
             ->get();
         return View("home", compact('cars'));
     }
@@ -56,6 +56,11 @@ class CarsController extends Controller
             $request->get('keys_longitude')
         );
         return redirect('home');
+    }
+
+    public function view()
+    {
+        return view('CarsView/AddCarForRent');
     }
 
 }

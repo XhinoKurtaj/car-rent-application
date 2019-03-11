@@ -24,7 +24,7 @@ class CreateCarsTable extends Migration
             $table->string('condition_check',255);
             $table->boolean('availability');
             $table->unsignedInteger('photo_id')->nullable();
-            $table->timestamps();
+            $table->date('created_at');
 
             $table->foreign('user_id')
                 ->references('id')
