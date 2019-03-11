@@ -14,7 +14,8 @@ class Car extends Model
         'rent_price',
         'condition_check',
         'availability',
-        'photo_id'
+        'photo_id',
+        'created_at'
     ];
 
     protected $timestamp = false;

@@ -13,7 +13,7 @@
 						Add Car for rent
 					</span>
 
-                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                <div class="wrap-input100 validate-input" >
                     <input class="input100" type="text" name="model" placeholder="Model">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
@@ -21,16 +21,16 @@
 						</span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate = "Password is required">
-                    <input class="input100" type="text" name="type" placeholder="type">
+                <div class="wrap-input100 validate-input" >
+                    <input class="input100" type="text" name="type" placeholder="Type">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fas fa-car-side" aria-hidden="true"></i>
 						</span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input class="input100" type="text" name="engine_size" placeholder="engine_size">
+                <div class="wrap-input100 validate-input" >
+                    <input class="input100" type="text" name="engine_size" placeholder="Engine Size">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="icomoon icon-cog-2"></i>
@@ -38,24 +38,24 @@
 						</span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input class="input100" type="text" name="fuel_economy" placeholder="fuel_economy">
+                <div class="wrap-input100 validate-input" >
+                    <input class="input100" type="text" name="fuel_economy" placeholder="Fuel Economy">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fas fa-oil-can" aria-hidden="true"></i>
 						</span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input class="input100" type="text" name="rent_price" placeholder="rent_price">
+                <div class="wrap-input100 validate-input" >
+                    <input class="input100" type="text" name="rent_price" placeholder="Rent Price">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fas fa-dollar-sign" aria-hidden="true"></i>
 						</span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input class="input100" type="text" name="condition_check" placeholder="condition_check">
+                <div class="wrap-input100 validate-input">
+                    <input class="input100" type="text" name="condition_check" placeholder="Condition Check">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fas fa-align-left" aria-hidden="true"></i>
@@ -69,15 +69,15 @@
 
 
                 <div class="wrap-input100 validate-input">
-                    <input class="input100" type="text" name="parked_latitude" placeholder="parked_latitude">
+                    <input class="input100" type="text" name="parked_latitude" placeholder="Parked Latitude">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fas fa-map-marker-alt" aria-hidden="true"></i>
 						</span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input class="input100" type="text" name="parked_longitude" placeholder="parked_longitude">
+                <div class="wrap-input100 validate-input">
+                    <input class="input100" type="text" name="parked_longitude" placeholder="Parked Longitude">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fas fa-map-marker-alt" aria-hidden="true"></i>
@@ -101,7 +101,7 @@
 <script src="{{ asset('vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 <!--===============================================================================================-->
 <script src="{{ asset('vendor/bootstrap/js/popper.js')}}"></script>
-<script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+
 <!--===============================================================================================-->
 <script src="{{ asset('vendor/select2/select2.min.js')}}"></script>
 <!--===============================================================================================-->

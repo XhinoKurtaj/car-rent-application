@@ -14,12 +14,7 @@
 
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" type="text/css">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="{{ asset('/images/images/icons/favicon.ico')}}"/>
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css')}}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/animate/animate.css')}}">
     <!--===============================================================================================-->
@@ -31,9 +26,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/add-car.css')}}">
     <!--===============================================================================================-->
 
-
-
-
     <style>
         .resize-caurosel{
             height: 500px;
@@ -42,7 +34,7 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
-    <a class="navbar-brand d-flex flex-fill" href="#">Navbar</a>
+    <a class="navbar-brand d-flex flex-fill" href="{{route('home')}}">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
             aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -77,6 +69,7 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </li>
+            <a class="nav-link">{{auth()->user()->full_name}}</a>
             <li class="nav-item avatar dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true"
                    aria-expanded="false">
