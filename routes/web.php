@@ -19,4 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'CarsController@index')
      ->name('home');
-
+Route::get('/home/car', 'CarsController@view')
+    ->name('add.car');
+Route::post('/home/car', 'CarsController@store')
+    ->name('post.car');

@@ -30,11 +30,12 @@ class CarsController extends Controller
             'type' => 'required|string|max:255',
             'engine_size' => 'required|string|max:255',
             'fuel_economy' => 'required|string|max:255',
-            'rent_price' => 'required|decimal',
+            'rent_price' => 'required|integer',
             'condition_check' => 'required|string|max:255',
             ]);
         $userId = auth()->user()->id;
         $car = Car::insertGetId([
+            'user_id' => $userId,
             'model' => $request->get('model'),
             'type' => $request->get('type'),
             'engine_size' => $request->get('engine_size'),
@@ -43,17 +44,15 @@ class CarsController extends Controller
             'condition_check' => $request->get('condition_check'),
             'availability' => 1
         ]);
-        $properties = CarPropertiesController::store(
-            $car,
-            $request->get('property_name'),
-            $request->get('property_value')
-        );
+//        $properties = CarPropertiesController::store(
+//            $car,
+//            $request->get('property_name'),
+//            $request->get('property_value')
+//        );
         $location = LocationController::store(
             $car,
             $request->get('parked_latitude'),
-            $request->get('parked_longitude'),
-            $request->get('keys_latitude'),
-            $request->get('keys_longitude')
+            $request->get('parked_longitude')
         );
         return redirect('home');
     }

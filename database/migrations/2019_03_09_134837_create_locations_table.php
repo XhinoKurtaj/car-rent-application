@@ -18,8 +18,6 @@ class CreateLocationsTable extends Migration
             $table->unsignedInteger('car_id');
             $table->float('parked_latitude');
             $table->float('parked_longitude');
-            $table->float('keys_latitude');
-            $table->float('keys_longitude');
             $table->timestamps();
 
             $table->foreign('car_id')

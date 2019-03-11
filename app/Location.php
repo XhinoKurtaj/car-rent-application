@@ -10,8 +10,6 @@ class Location extends Model
         'parked_latitude',
         'parked_longitude',
         'car_id',
-        'keys_latitude',
-        'keys_longitude',
     ];
 
     public function cars()
