@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class LocationController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public static function store($carId, $parkedLat, $parkedLon)
     {
         $carLocation = Location::create([

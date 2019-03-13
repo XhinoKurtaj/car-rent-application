@@ -83,4 +83,8 @@ class User extends Authenticatable
             'user_id','car_id');
     }
 
+    public function imageables()
+    {
+        return $this->morphMany('App\Image','imageable');
+    }
 }

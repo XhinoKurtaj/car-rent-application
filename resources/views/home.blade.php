@@ -55,7 +55,7 @@
                 </div>
                 <div class="card-info">
                    {{$car->type}}
-                    <a href="#">Read Article<span class="licon icon-arr icon-black"></span></a>
+                    <a href="{{route('show.car',$car->id)}}">Read More <i class="fas fa-info-circle"></i></a>
                 </div>
                 <div class="utility-info">
                     <ul class="utility-list">

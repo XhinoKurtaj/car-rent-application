@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class CarPropertiesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public static  function store($carId, $propertyName, $propertyValue)
     {
         $carProperties = CarProperty::create([

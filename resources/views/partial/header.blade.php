@@ -34,7 +34,7 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
-    <a class="navbar-brand d-flex flex-fill" href="{{route('home')}}">Navbar</a>
+    <i class="fas fa-car-side"></i> <a class="navbar-brand d-flex flex-fill" href="{{route('home')}}">Car Rental</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
             aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,7 +57,7 @@
                    aria-expanded="false">Dropdown
                 </a>
                 <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555">
-                    <a class="dropdown-item" href="#">Action</a>
+
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
@@ -76,9 +76,17 @@
                     <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" style="width:40px; height: 40px;" alt="avatar image">
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-55">
-                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="{{route('user.profile')}}"><i class="fas fa-user">
+                        </i> Profile</a>
                     <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i>
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </div>
             </li>
         </ul>

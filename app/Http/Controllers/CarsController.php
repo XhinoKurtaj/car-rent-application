@@ -56,4 +56,9 @@ class CarsController extends Controller
         return view('CarsView/AddCarForRent');
     }
 
+    public function show()
+    {
+        return view('CarsView/CarDetails');
+    }
+
 }

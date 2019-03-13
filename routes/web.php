@@ -23,3 +23,11 @@ Route::get('/home/car', 'CarsController@view')
     ->name('add.car');
 Route::post('/home/car', 'CarsController@store')
     ->name('post.car');
+Route::get('/home/car/{id}', 'CarsController@show')
+    ->name('show.car');
+Route::get('/home/profile', 'UsersController@show')
+    ->name('user.profile');
+Route::post('/home/profile/photo', 'ImagesController@store')
+    ->name('user.photo');
+Route::get('/home/profile/images', 'ImagesController@index')
+    ->name('user.photo');
