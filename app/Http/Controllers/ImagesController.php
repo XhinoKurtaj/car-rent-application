@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Car;
 use App\Image;
 use Illuminate\Http\Request;
 
@@ -34,5 +35,14 @@ class ImagesController extends Controller
         return back()->with('success', "Photo created successfully");
     }
 
-
+    public function storeCarsPhoto($carId, $photos)
+    {
+        $car = Car::findOrFail($carId);
+        foreach ($photos as $photo) {
+            $image = $car->images()->create([
+                'user_id' => auth()->user()->id,
+                'photo' => $photo->store('images/cars', ['disk' => 'public'])
+            ]);
+        }
+    }
 }

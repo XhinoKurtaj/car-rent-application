@@ -38,6 +38,8 @@ class CarsController extends Controller
             'availability' => 1,
             'created_at' => today(),
         ]);
+        $images = new ImagesController();
+        $images->storeCarsPhoto($car, $request->photos);
 //        $properties = CarPropertiesController::store(
 //            $car,
 //            $request->get('property_name'),
@@ -56,9 +58,19 @@ class CarsController extends Controller
         return view('CarsView/AddCarForRent');
     }
 
-    public function show()
+    public function show($carId)
     {
-        return view('CarsView/CarDetails');
-    }
+        $cars = Car::where('id',$carId)
+            ->with(
+                'locations',
+                'property',
+                'wishlists',
+                'user',
+                'images',
+                'reviews',
+                'comments')
+            ->get();
 
+        return view('CarsView/CarDetails',compact('cars'));
+    }
 }

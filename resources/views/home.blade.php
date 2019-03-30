@@ -47,8 +47,14 @@
 <div class="container-fluid">
     <div class="row">
     @foreach($cars as $car)
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="blog-card spring-fever" style="background:url() center no-repeat;">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+        @if($car->photo_id != null)
+            @php $x = \App\Image::FindOrFail($car->photo_id) @endphp
+                <div class="blog-card spring-fever"
+                     style="background:url('{{ Storage::url($x->photo) }}') center no-repeat; background-size:cover">
+            @else
+               <div class="blog-card spring-fever" style="background:url() center no-repeat;">
+            @endif
                 <div class="title-content">
                     <h3><a href="#">{{$car->model}}</a></h3>
                     <div class="intro"><a href="#">More</a></div>

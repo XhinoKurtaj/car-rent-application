@@ -28,6 +28,7 @@ Route::get('/home/car/{id}', 'CarsController@show')
 Route::get('/home/profile', 'UsersController@show')
     ->name('user.profile');
 Route::post('/home/profile/photo', 'ImagesController@store')
-    ->name('user.photo');
+    ->name('new.photo');
 Route::get('/home/profile/images', 'ImagesController@index')
     ->name('user.photo');
+

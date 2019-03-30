@@ -23,14 +23,13 @@ class CarStoreRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        return  [
             'model' => 'required|string|max:255',
             'type' => 'required|string|max:255',
             'engine_size' => 'required|string|max:255',
             'fuel_economy' => 'required|string|max:255',
             'rent_price' => 'required|integer',
             'condition_check' => 'required|string|max:255',
-
         ];
     }
 }

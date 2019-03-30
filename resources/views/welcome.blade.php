@@ -80,11 +80,9 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-
-
             <div class="content">
                 <div class="title m-b-md">
-                    Car Rent
+                    Rental Horizon
                 </div>
 
                 <div class="links">

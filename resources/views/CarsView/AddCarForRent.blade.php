@@ -1,5 +1,10 @@
 @include('../partial.header')
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+
+
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
@@ -7,7 +12,7 @@
                 <img src="/images/images/img-01.png" alt="IMG">
             </div>
 
-            <form class="login100-form validate-form"  action="/home/car" method="POST">
+            <form class="login100-form validate-form" enctype="multipart/form-data" action="/home/car" method="POST">
                 @CSRF
 					<span class="login100-form-title">
 						Add Car for rent
@@ -84,6 +89,9 @@
 						</span>
                 </div>
 
+                <div class="fallback wrap-input100 validate-input">
+                    <input multiple="multiple" name="photos[]" type="file">
+                </div>
 
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn">
@@ -95,7 +103,6 @@
         </div>
     </div>
 </div>
-
 
 <!--===============================================================================================-->
 <script src="{{ asset('vendor/jquery/jquery-3.2.1.min.js')}}"></script>

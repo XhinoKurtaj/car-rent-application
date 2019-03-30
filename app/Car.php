@@ -50,4 +50,19 @@ class Car extends Model
         return $this->belongsToMany(Car::class, 'wishlists',
             'car_id','user_id');
     }
+
+    public function images()
+    {
+        return $this->morphMany('App\Image','imageable');
+    }
+
+    public function reviews()
+    {
+        return $this->morphMany('App\Review','reviewable');
+    }
+
+    public function comments()
+    {
+        return $this->morphMany('App\Comment','commentable');
+    }
 }

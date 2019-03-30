@@ -50,7 +50,10 @@
                 <a class="nav-link" href="{{ route('add.car') }}">Add Car For Rent</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#">My Cars</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Rents History</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-555" data-toggle="dropdown" aria-haspopup="true"
@@ -58,8 +61,8 @@
                 </a>
                 <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555">
 
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Rents History</a>
+                    <a class="dropdown-item" href="#">My Offers</a>
                 </div>
             </li>
         </ul>
